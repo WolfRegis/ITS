@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../../Navbar'
 import Header from '../../Header'
 import HomeHeader from './HomeHeader'
+import CardContainer from '../../CardContainer'
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Header>
         <HomeHeader></HomeHeader>
       </Header>
+      <CardContainer />
     </div>
   )
 }

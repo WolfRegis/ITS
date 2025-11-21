@@ -21,7 +21,7 @@ const HomeHeaderStyled = styled.div`
   flex-grow: 0;
   gap: 2rem;
   width: 50%;
-  margin: 50px 0 80px 0;
+  margin: 50px 0 50px 0;
 
 
   h1{
