@@ -15,5 +15,4 @@ export default function NavItem({isDropdown, dropdown, onHover,children}) {
 
 const NavItemStyled = styled.li`
       text-transform: uppercase;
-  
 `;

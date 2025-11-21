@@ -2,15 +2,15 @@ import React from 'react'
 import styled from 'styled-components';
 import theme from './Theme';
 
-export default function Header() {
+export default function Header({children}) {
   return (
-    <HeaderStyled className='flex relative w-12/12 h-1/2'>
-      mon header
+    <HeaderStyled className='flex items-center justify-between relative w-12/12 h-1/2 p-4 shadow-md px-30'>
+      {children}
     </HeaderStyled>
   )
 }
 
 
 const HeaderStyled = styled.div`
-      background-color: ${theme.colors.secondary};
+      background-color: ${theme.colors.secondaryLight};
 `;
