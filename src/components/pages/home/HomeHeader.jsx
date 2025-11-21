@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components';
 
 export default function HomeHeader() {
   return (
@@ -7,3 +8,7 @@ export default function HomeHeader() {
     </div>
   )
 }
+
+const HomeHeaderStyled = styled.div`
+  
+`;

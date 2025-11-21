@@ -140,10 +140,7 @@ const handleMouseLeave = (e) => {
 
                   <NavItem isDropdown={false}>Contact</NavItem>
       ]
-                  }
-                  
-                  
-                
+                  }   
                   
             </ul>
       </nav>
