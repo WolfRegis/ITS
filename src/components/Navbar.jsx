@@ -1,6 +1,6 @@
 import logo from '../assets/logo.png'
 import styled from 'styled-components';
-import theme from './Theme';
+import theme from './theme.js';
 import NavItem from './ui/NavItem';
 import Dropdown from './ui/Dropdown';
 import { IoMdArrowDropdownCircle } from "react-icons/io";

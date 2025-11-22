@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import './App.css'
-import theme from './components/Theme';
+import theme from './components/theme.js';
 import Home from './components/pages/home/Home';
 
 function App() {
@@ -13,5 +13,5 @@ function App() {
 export default App
 
 const AppStyled = styled.div`
-  font-family: ${theme.fonts.main};
+  font-family: ${theme.fonts.mainColor};
 `;
