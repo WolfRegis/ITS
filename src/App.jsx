@@ -14,4 +14,7 @@ export default App
 
 const AppStyled = styled.div`
   font-family: ${theme.fonts.mainColor};
+  *{
+    font-family: 'Poppins', sans-serif;
+  }
 `;
