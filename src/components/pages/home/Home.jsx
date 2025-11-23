@@ -3,15 +3,17 @@ import Navbar from '../../Navbar'
 import Header from '../../Header'
 import HomeHeader from './HomeHeader'
 import CardContainer from '../../CardContainer'
+import DevisContainer from './DevisContainer'
 
 export default function Home() {
   return (
     <div>
       <Navbar></Navbar>
       <Header>
-        <HomeHeader></HomeHeader>
+        <HomeHeader/>
       </Header>
       <CardContainer />
+      <DevisContainer/>
     </div>
   )
 }
