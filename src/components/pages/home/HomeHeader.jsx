@@ -30,8 +30,6 @@ const HomeHeaderStyled = styled.div`
     text-transform: uppercase;
     line-height: 3.5rem;
 
-
-
     i{
       font-style:normal;
       color: ${theme.colors.primary};
@@ -42,6 +40,10 @@ const HomeHeaderStyled = styled.div`
   p{
     font-size: smaller;
     color: ${theme.colors.other};
+  }
+
+  button{
+    align-self: start;
   }
 
 `;
