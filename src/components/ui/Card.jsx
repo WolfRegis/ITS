@@ -1,16 +1,26 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import styled from 'styled-components';
 import theme from '../theme';
 
-export default function Card() {
+export default function Card({titre, details}) {
+
+      const h2 = useRef(null)
+      const btn = useRef(null)
 
 
 
 
 
-
-      const handleMouseEnter = (e)=>{
-            console.log(e.target)
+      const handleMouseEnter = ()=>{
+            //console.log(e.target)
+            //console.log(h2.current.classList)
+            h2.current.classList +=" activeH2"
+            btn.current.classList +=" activeBtn"
+            
+      }
+      const handleMouseLeave = ()=>{
+            h2.current.classList.remove("activeH2")
+            btn.current.classList.remove("activeBtn")
       }
 
 
@@ -19,10 +29,10 @@ export default function Card() {
 
 
   return (
-    <CardStyled className='relative flex flex-col gap-6 justify-center w-90 ' onMouseEnter={handleMouseEnter}>
-      <h2 className='flex justify-center items-center h-13'>Sécurité</h2>
-      <p className='mx-5'>Sécurisez les infrastructures réseaux de vos entreprises pour prévenir, détecter et récupérer en cas de menaces.</p>
-      <button className='grow-0 mb-6'>En savoir plus</button>
+    <CardStyled className='relative flex flex-col gap-6 justify-center w-90 ' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <h2 className='flex justify-center items-center h-13' ref={h2}>{titre}</h2>
+      <p className='mx-5'>{details}</p>
+      <button className='grow-0 mb-6' ref={btn} >En savoir plus</button>
     </CardStyled>
   )
 }
@@ -37,11 +47,21 @@ const CardStyled = styled.div`
             font-weight: bold;
             color: white;
             background-color: ${theme.colors.other};
-
       }
+      .activeH2{
+            background-color: ${theme.colors.primary};
+      }
+
       button{
             align-self:center;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: small;
       }
+      .activeBtn{ 
+            color: ${theme.colors.primary};
+      }
+
       p{
             font-size: 14px;
             text-align: center;
