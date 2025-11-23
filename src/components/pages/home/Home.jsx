@@ -4,6 +4,7 @@ import Header from '../../Header'
 import HomeHeader from './HomeHeader'
 import CardContainer from '../../CardContainer'
 import DevisContainer from './DevisContainer'
+import Footer from '../../Footer'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       </Header>
       <CardContainer />
       <DevisContainer/>
+      <Footer/>
     </div>
   )
 }
