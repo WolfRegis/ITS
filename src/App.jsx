@@ -4,7 +4,7 @@ import theme from './components/theme.js';
 import Home from './components/pages/home/Home';
 
 function App() {
-
+  
   return <AppStyled>
       <Home/>
   </AppStyled>

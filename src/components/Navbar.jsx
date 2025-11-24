@@ -107,12 +107,30 @@ const handleMouseLeave = (e) => {
 
 
 
+const handleScroll =()=> {
+
+    if(window.scrollY==0){
+          
+          document.getElementById("navabar").style.transition="all 0.5s ease";
+          document.getElementById("navabar").style.backgroundColor=theme.colors.secondaryLight;
+    }else{
+          console.log(window.scrollY)
+          document.getElementById("navabar").style.transition="all 0.5s ease";
+          document.getElementById("navabar").style.backgroundColor="rgba(4, 9, 30, 0.9)";
+    }
+}
+
+  window.addEventListener('scroll', handleScroll)
+
+
+
+
 
 
 
 
   return (
-    <NavbarStyled className="flex items-center justify-between p-4 shadow-md px-30" onMouseLeave={(e)=>handleUlLeave(e)} >
+    <NavbarStyled id="navabar" className="flex items-center justify-between p-4 shadow-md px-30" onMouseLeave={(e)=>handleUlLeave(e)} >
       <span>
             <img src={logo} alt="ITS Logo" className="w-10" />
       </span>
@@ -151,7 +169,7 @@ const handleMouseLeave = (e) => {
 
 const NavbarStyled = styled.div`
       background-color: ${theme.colors.secondaryLight};
-      border-bottom: 1px solid ${theme.colors.primary};
+      border-bottom: 1px solid #39353e;
       position: sticky;
       top: 0;
       left: 0;
