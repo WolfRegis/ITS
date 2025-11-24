@@ -6,6 +6,8 @@ import CardContainer from '../../CardContainer'
 import DevisContainer from './DevisContainer'
 import Footer from '../../Footer'
 import ItBan from '../../ui/ItBan'
+import ServiceCard from '../../ServiceContainer'
+import ServiceContainer from '../../ServiceContainer'
 
 export default function Home() {
   return (
@@ -16,6 +18,7 @@ export default function Home() {
         <HomeHeader/>
       </Header>
       <CardContainer />
+      <ServiceContainer/>
       <DevisContainer/>
       <Footer/>
     </div>
