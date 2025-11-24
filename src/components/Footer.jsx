@@ -3,10 +3,11 @@ import List from './List'
 import styled from 'styled-components';
 import theme from './theme';
 import { IoIosArrowRoundForward } from 'react-icons/io';
+import CopyrightBan from './ui/CopyrightBan';
 
 export default function Footer() {
   return (
-  <FooterStyled className=' p-25 ' >
+  <FooterStyled className=' px-25 pt-20 flex flex-col gap-10' >
 
       <div className='relative flex flex-row justify-between w-full'>
             <List title="Services" >
@@ -35,20 +36,33 @@ export default function Footer() {
             </List>
             <List title="Formations">
                   <li><p>Récevez les informations de nos nouveaux services et produits en vous abonnant à notre Newsletter</p></li>
-                  <li className='flex flex-row '><input type="text" className='border-white h-10 w-10/12 bg-white pl-2 text-sm' placeholder='entrez votre texte'/> <IoIosArrowRoundForward  id='icone' className=' h-full w-10 text-sm text-white'/>
+                  <li className='flex flex-row '><input type="text" className='border-white h-10 w-10/12 bg-white pl-2 text-sm' placeholder='entrez votre Email'/><button className=' h-full w-10 text-sm text-white'> <IoIosArrowRoundForward  id='icone' className=' h-full w-full text-sm'/></button>
 </li>
                   
             </List>
       </div>
+      <CopyrightBan/>
   </FooterStyled>)
 }
 
 const FooterStyled = styled.footer`
 
       background-color: ${theme.colors.mainColor};
+      color: ${theme.colors.other};
 
       #icone{
          background-color: ${theme.colors.primary};   
+      }
+
+      input{
+            outline: none;
+
+            button{
+                  &:hover{
+                        color:white
+                  }
+            }
+
       }
 
   
