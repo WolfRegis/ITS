@@ -5,7 +5,8 @@ import theme from './theme';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 
 export default function Footer() {
-  return (<FooterStyled className=' p-25 ' >
+  return (
+  <FooterStyled className=' p-25 ' >
 
       <div className='relative flex flex-row justify-between w-full'>
             <List title="Services" >
