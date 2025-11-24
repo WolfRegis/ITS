@@ -7,14 +7,14 @@ import IconCompil from './IconCompil';
 
 export default function ItBan() {
   return (
-    <ItBanStyled className='flex flex-row justify-between items-center h-10 px-30'>
+    <ItBanStyled className='flex flex-row justify-between items-center h-10 lg:px-30 px-8'>
       <IconCompil />      
-            <span className='text-sm text-white flex flex-row gap-2'>        
-            <a href="mailto:support@its-groupe.net" className='text-xs text-white flex flex-row items-center gap-2'> <FiMail />support@its-groupe.net</a> |
-            <a href="tel:+242 06 829 39 63" className='text-xs text-white flex flex-row items-center gap-2'><FiPhoneCall />+242 06 829 39 63</a>
-      </span>
+          <span className='lg:text-sm text-xs text-white flex lg:flex-row flex-col gap-1 lg:gap-3'>        
+            <a href="mailto:support@its-groupe.net" className='text-[9px] text-white flex flex-row items-center gap-2 lg:gap-1'> <FiMail />support@its-groupe.net</a>
+            <a href="tel:+242 06 829 39 63" className='text-[9px] text-white flex flex-row items-center gap-2 lg:gap-1'><FiPhoneCall />+242 06 829 39 63</a>
+          </span>
     </ItBanStyled>
-  )
+  ) 
 }
 
 const ItBanStyled = styled.div`

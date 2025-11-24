@@ -7,9 +7,9 @@ import CopyrightBan from './ui/CopyrightBan';
 
 export default function Footer() {
   return (
-  <FooterStyled className=' px-25 pt-20 flex flex-col gap-10' >
+  <FooterStyled className=' lg:px-25 px-0 pt-20 flex flex-col items-center lg:gap-10 w-full' >
 
-      <div className='relative flex flex-row justify-between w-full'>
+      <div className='relative lg:flex lg:flex-row grid grid-cols-2 gap-2 px-8 lg:justify-between items-right w-full md:grid-cols-4'>
             <List title="Services" >
                   <li><button>sms marketing</button></li>
                   <li><button>voip</button></li>
@@ -30,13 +30,13 @@ export default function Footer() {
             </List>
             <List title="Formations">
                   <li><button>bureautique</button></li>
-                  <li><button>Sage compta & paie</button></li>
-                  <li><button>Developpement web</button></li>
+                  <li><button className='text-xs'>Sage compta & paie</button></li>
+                  <li><button className='text-xs'>Developpement web</button></li>
                   <li><button>infographie</button></li>
             </List>
             <List title="Formations">
                   <li><p>Récevez les informations de nos nouveaux services et produits en vous abonnant à notre Newsletter</p></li>
-                  <li className='flex flex-row '><input type="text" className='border-white h-10 w-10/12 bg-white pl-2 text-sm outline-0' placeholder='entrez votre Email'/><button className=' h-full w-10 text-sm text-white cursor-pointer'> <IoIosArrowRoundForward  id='icone' className=' h-full w-full text-sm'/></button>
+                  <li className='flex flex-row '><input type="text" className='border-white lg:h-10 lg:w-10/12 bg-white pl-2 text-sm outline-0' placeholder='entrez votre Email'/><button className=' h-full w-10 text-sm text-white cursor-pointer'> <IoIosArrowRoundForward  id='icone' className=' h-full w-full text-sm'/></button>
 </li>
                   
             </List>

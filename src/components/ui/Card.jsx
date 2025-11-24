@@ -27,10 +27,10 @@ export default function Card({titre, details}) {
 
 
   return (
-    <CardStyled className='relative flex flex-col lg:gap-6 gap-3 justify-center lg:w-90 sm:w-90 shadow-lg' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <h2 className='flex justify-center items-center h-13 text-lg font-bold text-white' ref={h2}>{titre}</h2>
-      <p className='mx-5 text-[14px] text-center'>{details}</p>
-      <button className='grow-0 mb-6 self-center cursor-pointer font-bold text-sm' ref={btn} >En savoir plus</button>
+    <CardStyled className='relative flex flex-col lg:gap-6 gap-3 justify-center lg:w-90 w-50 shadow-lg' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <h2 className='flex justify-center items-center lg:h-13 h-8 lg:text-lg text-xs font-bold text-white' ref={h2}>{titre}</h2>
+      <p className='mx-5 lg:text-[14px] text-xs text-center'>{details}</p>
+      <button className='grow-0 mb-6 self-center cursor-pointer font-bold lg:text-sm text-xs' ref={btn} >En savoir plus</button>
     </CardStyled>
   )
 }

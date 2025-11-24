@@ -108,11 +108,11 @@ const handleScroll =()=> {
 
     if(window.scrollY==0){
           
-          document.getElementById("navabar").style.transition="all 0.5s ease";
-          document.getElementById("navabar").style.backgroundColor=theme.colors.secondaryLight;
+          document.getElementById("navbar").style.transition="all 0.5s ease";
+          document.getElementById("navbar").style.backgroundColor=theme.colors.secondaryLight;
     }else{
-          document.getElementById("navabar").style.transition="all 0.5s ease";
-          document.getElementById("navabar").style.backgroundColor="rgba(4, 9, 30, 0.9)";
+          document.getElementById("navbar").style.transition="all 0.5s ease";
+          document.getElementById("navbar").style.backgroundColor="rgba(4, 9, 30, 0.9)";
     }
 }
 
@@ -126,12 +126,12 @@ const handleScroll =()=> {
 
 
   return (
-    <NavbarStyled id="navabar" className="sticky top-0 left-0 w-full h-auto z-2 flex items-center justify-between p-4 shadow-md px-30 border-b-[1px solid #39353e]" onMouseLeave={(e)=>handleUlLeave(e)} >
-      <span>
-            <img src={logo} alt="ITS Logo" className="w-10" />
+    <NavbarStyled id="navbar" className="sticky top-0 left-0 w-full h-auto z-2 flex items-center justify-between py-4 shadow-md lg:px-30 px-3 border-b-[1px solid #39353e]" onMouseLeave={(e)=>handleUlLeave(e)} >
+      <span >
+            <img src={logo} alt="ITS Logo" className="lg:w-10 w-5" />
       </span>
-      <nav>
-            <ul className="flex space-x-6 text-white font-semibold cursor-pointer gap-& text-xs">
+      <nav className='lg:visible relative'>
+            <ul className="relative flex flex-row gap-2 lg:gap-5 text-white items-center font-semibold cursor-pointer text-[5px] lg:text-sm ">
                   {
                         menu =[
                   <NavItem isDropdown={false} onHover={handleHover}>Accueil</NavItem>,
@@ -139,15 +139,15 @@ const handleScroll =()=> {
                   <NavItem isDropdown={false}>à propos</NavItem>,
 
                   <NavItem isDropdown={true} onHover={handleHover} dropdown={<Dropdown isHidden={inactive1} onMouseLeave={handleMouseLeave}> {dropdownItemsIt} </Dropdown>}>
-                        <span className='flex flex-row items-center gap-1 it'>It & Télécoms <IoMdArrowDropdownCircle /></span>
+                        <span className='flex flex-row lg:items-center items-start  lg:gap-1 it'>It & Télécoms <IoMdArrowDropdownCircle className='lg:text-sm text-[6px]' /></span>
                   </NavItem>,
 
                   <NavItem isDropdown={true} onHover={handleHover} dropdown={<Dropdown isHidden={inactive2} onMouseLeave={handleMouseLeave}> {dropdownItemsDev} </Dropdown>}>
-                        <span className='flex flex-row items-center gap-1 dev'>Développement <IoMdArrowDropdownCircle /></span>
+                        <span className='flex flex-row lg:items-center items-start  lg:gap-1 dev'>Développement <IoMdArrowDropdownCircle className='lg:text-sm text-[6px]' /></span>
                   </NavItem>,
 
                   <NavItem isDropdown={true} onHover={handleHover} dropdown={<Dropdown isHidden={inactive3} onMouseLeave={handleMouseLeave}> {dropdownItemsElec} </Dropdown>}>
-                        <span className='flex flex-row items-center gap-1 elect'>électricité <IoMdArrowDropdownCircle /></span>
+                        <span className='flex flex-row lg:items-center items-start lg:gap-1 elect'>électricité <IoMdArrowDropdownCircle className='lg:text-sm text-[6px]' /></span>
                   </NavItem>,
 
                   <NavItem isDropdown={false}>formation</NavItem>,
