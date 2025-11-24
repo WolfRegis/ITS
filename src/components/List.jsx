@@ -4,9 +4,9 @@ import theme from './theme';
 
 export default function List({title, children}) {
   return (
-    <ListStyled className='flex flex-col gap-3'>
+    <ListStyled className='flex flex-col gap-3 max-w-[350px]'>
           <h3 className='text-white text-lg font-semibold'>{title}</h3>
-          <ul className='flex flex-col gap-1 '>
+          <ul className='flex flex-col gap-2 '>
             {children}
           </ul>
     </ListStyled>
@@ -15,24 +15,8 @@ export default function List({title, children}) {
 
 const ListStyled = styled.div`
 
-      max-width: 350px;
-
       li{
             color: ${theme.colors.secondary};
-            margin-bottom: 4px;
-
-     
-            & button:hover{
-                  color: ${theme.colors.primary};
-                  cursor: pointer;
-
-            }
-
-            button{       
-                  text-transform: capitalize;
-
-            }
-
       }
   
 `;

@@ -1,13 +1,4 @@
-import React from 'react'
-import styled from 'styled-components';
-
 export default function H2({children, color}) {
 
-  return <H2Styled className={color=="white" ? "text-white" : "text-black"}>{children}</H2Styled>
+  return <h2 className={color=="white" ? "text-white text-3xl font-bold" : "text-black text-3xl font-bold"}>{children}</h2>
 }
-
-const H2Styled = styled.h2`
-      font-size: xx-large;
-      font-weight: bold;
-  
-`;

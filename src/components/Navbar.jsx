@@ -84,10 +84,7 @@ const handleHover = (e) => {
 const handleMouseLeave = (e) => {
          menu.map(li=>{
             if(li.props.isDropdown){
-                  console.log(li.props.children.props.className)
-                  console.log(e.target.classList.contains("it"))
                   if(e.target.classList.contains("it")){
-                        console.log("survol sur ménu "+ li.props.children.props.children[0])
                         setInactive1(true)
 
                   }else if(e.target.classList.contains("dev")){
@@ -114,7 +111,6 @@ const handleScroll =()=> {
           document.getElementById("navabar").style.transition="all 0.5s ease";
           document.getElementById("navabar").style.backgroundColor=theme.colors.secondaryLight;
     }else{
-          console.log(window.scrollY)
           document.getElementById("navabar").style.transition="all 0.5s ease";
           document.getElementById("navabar").style.backgroundColor="rgba(4, 9, 30, 0.9)";
     }
@@ -130,7 +126,7 @@ const handleScroll =()=> {
 
 
   return (
-    <NavbarStyled id="navabar" className="flex items-center justify-between p-4 shadow-md px-30" onMouseLeave={(e)=>handleUlLeave(e)} >
+    <NavbarStyled id="navabar" className="sticky top-0 left-0 w-full h-auto z-2 flex items-center justify-between p-4 shadow-md px-30 border-b-[1px solid #39353e]" onMouseLeave={(e)=>handleUlLeave(e)} >
       <span>
             <img src={logo} alt="ITS Logo" className="w-10" />
       </span>
@@ -169,14 +165,4 @@ const handleScroll =()=> {
 
 const NavbarStyled = styled.div`
       background-color: ${theme.colors.secondaryLight};
-      border-bottom: 1px solid #39353e;
-      position: sticky;
-      top: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: auto;
-      z-index: 2;
-            
-
 `;

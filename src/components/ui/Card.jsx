@@ -12,8 +12,6 @@ export default function Card({titre, details}) {
 
 
       const handleMouseEnter = ()=>{
-            //console.log(e.target)
-            //console.log(h2.current.classList)
             h2.current.classList +=" activeH2"
             btn.current.classList +=" activeBtn"
             
@@ -29,10 +27,10 @@ export default function Card({titre, details}) {
 
 
   return (
-    <CardStyled className='relative flex flex-col gap-6 justify-center w-90 ' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <h2 className='flex justify-center items-center h-13' ref={h2}>{titre}</h2>
-      <p className='mx-5'>{details}</p>
-      <button className='grow-0 mb-6' ref={btn} >En savoir plus</button>
+    <CardStyled className='relative flex flex-col lg:gap-6 gap-3 justify-center lg:w-90 sm:w-90 shadow-lg' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <h2 className='flex justify-center items-center h-13 text-lg font-bold text-white' ref={h2}>{titre}</h2>
+      <p className='mx-5 text-[14px] text-center'>{details}</p>
+      <button className='grow-0 mb-6 self-center cursor-pointer font-bold text-sm' ref={btn} >En savoir plus</button>
     </CardStyled>
   )
 }
@@ -40,31 +38,19 @@ export default function Card({titre, details}) {
 
 const CardStyled = styled.div`
 
-      box-shadow: 0px 10px 30px 0px rgba(153, 153, 153, 0.1);
-
       h2{
-            font-size: large;
-            font-weight: bold;
-            color: white;
             background-color: ${theme.colors.other};
       }
       .activeH2{
             background-color: ${theme.colors.primary};
       }
 
-      button{
-            align-self:center;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: small;
-      }
       .activeBtn{ 
             color: ${theme.colors.primary};
       }
 
       p{
-            font-size: 14px;
-            text-align: center;
+
             color :${theme.colors.other};
       }
 `;

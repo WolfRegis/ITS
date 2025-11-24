@@ -4,8 +4,6 @@
             secondary: "#6c757d;",
             secondaryLight: "rgba(4, 9, 30, 0.8)",
             mainColor:"#283B5C",
-            success: "#28a745;",
-            danger: "#dc3545;",
             other:'#777'
       }
 

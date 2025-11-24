@@ -19,8 +19,6 @@ export default function ItBan() {
 
 const ItBanStyled = styled.div`
       background-color: ${theme.colors.mainColor};
-
-  
 `;
 
 
