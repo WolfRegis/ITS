@@ -3,7 +3,3 @@
 *{
       transition: all 0.3s ease-out 50ms;
 }
-
-#root{
-   overflow-x: hidden;  
-}

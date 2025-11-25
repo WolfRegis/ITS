@@ -14,7 +14,7 @@ import { TfiWorld } from "react-icons/tfi";
 
 
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 export default function Navbar() {
@@ -116,7 +116,11 @@ const handleScroll =()=> {
     }
 }
 
-  window.addEventListener('scroll', handleScroll)
+
+useEffect(() => {
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll, {passive:true});
+}, []);
 
 
 
@@ -126,7 +130,7 @@ const handleScroll =()=> {
 
 
   return (
-    <NavbarStyled id="navbar" className="sticky top-0 left-0 w-full h-auto z-2 flex items-center justify-between py-4 shadow-md lg:px-30 px-3 border-b-[1px solid #39353e]" onMouseLeave={(e)=>handleUlLeave(e)} >
+    <NavbarStyled id="navbar" className="sticky top-0 left-0 w-full h-auto z-50 flex items-center justify-between py-4 shadow-md lg:px-30 px-3" onMouseLeave={(e)=>handleUlLeave(e)} >
       <span >
             <img src={logo} alt="ITS Logo" className="lg:w-10 w-5" />
       </span>
