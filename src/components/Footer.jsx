@@ -36,7 +36,7 @@ export default function Footer() {
             </List>
             <List title="Formations">
                   <li><p>Récevez les informations de nos nouveaux services et produits en vous abonnant à notre Newsletter</p></li>
-                  <li className='flex flex-row '><input type="text" className='border-white lg:h-10 lg:w-10/12 bg-white pl-2 text-sm outline-0' placeholder='entrez votre Email'/><button className=' h-full w-10 text-sm text-white cursor-pointer'> <IoIosArrowRoundForward  id='icone' className=' h-full w-full text-sm'/></button>
+                  <li className='flex flex-row '><input type="text" name="clientMail" className='border-white lg:h-10 lg:w-10/12 bg-white pl-2 text-sm outline-0' placeholder='entrez votre Email'/><button className=' h-full w-10 text-sm text-white cursor-pointer'> <IoIosArrowRoundForward  id='icone' className=' h-full w-full text-sm'/></button>
 </li>
                   
             </List>

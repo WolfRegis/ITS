@@ -27,20 +27,20 @@ export default function Navbar() {
 
 
       const dropdownItemsIt = [
-            <li><span className='flex flex-row items-center gap-2'><PiNetworkFill /> Réseaux & télécoms </span></li>,
-            <li><span className='flex flex-row items-center gap-2'><FaTools /> Maintenance </span></li>,
-            <li><span className='flex flex-row items-center gap-2'><MdSecurity /> Sécurité </span></li>,
-            <li><span className='flex flex-row items-center gap-2'><FaMapLocationDot /> Géolocalisation </span></li>
+            <li key={Date.now + 10} ><span className='flex flex-row items-center gap-2'><PiNetworkFill /> Réseaux & télécoms </span></li>,
+            <li key={Date.now + 11} ><span className='flex flex-row items-center gap-2'><FaTools /> Maintenance </span></li>,
+            <li key={Date.now + 12} ><span className='flex flex-row items-center gap-2'><MdSecurity /> Sécurité </span></li>,
+            <li key={Date.now + 13} ><span className='flex flex-row items-center gap-2'><FaMapLocationDot /> Géolocalisation </span></li>
       ];
       const dropdownItemsDev = [
-            <li><span className='flex flex-row items-center gap-2'><TfiWorld /> Site internet </span></li>,
-            <li><span className='flex flex-row items-center gap-2'><FaServer /> VPS-server </span></li>,
-            <li><span className='flex flex-row items-center gap-2'><MdTextsms /> sms marketing </span></li>,
-            <li><span className='flex flex-row items-center gap-2'><FaCode /> Génie logiciel </span></li>
+            <li key={Date.now + 14} ><span className='flex flex-row items-center gap-2'><TfiWorld /> Site internet </span></li>,
+            <li key={Date.now + 15} ><span className='flex flex-row items-center gap-2'><FaServer /> VPS-server </span></li>,
+            <li key={Date.now + 16} ><span className='flex flex-row items-center gap-2'><MdTextsms /> sms marketing </span></li>,
+            <li key={Date.now + 17} ><span className='flex flex-row items-center gap-2'><FaCode /> Génie logiciel </span></li>
       ];
       const dropdownItemsElec = [
-            <li><span className='flex flex-row items-center gap-2'><FaIndustry /> électricité industrielle </span></li>,
-            <li><span className='flex flex-row items-center gap-2'><MdMapsHomeWork />  électricité batiment </span></li>,
+            <li key={Date.now + 18} ><span className='flex flex-row items-center gap-2'><FaIndustry /> électricité industrielle </span></li>,
+            <li key={Date.now + 19} ><span className='flex flex-row items-center gap-2'><MdMapsHomeWork />  électricité batiment </span></li>,
           ];
 
 
@@ -134,25 +134,25 @@ const handleScroll =()=> {
             <ul className="relative flex flex-row gap-2 lg:gap-5 text-white items-center font-semibold cursor-pointer text-[5px] lg:text-sm ">
                   {
                         menu =[
-                  <NavItem isDropdown={false} onHover={handleHover}>Accueil</NavItem>,
+                  <NavItem isDropdown={false} key={Date.now + 1} >Accueil</NavItem>,
 
-                  <NavItem isDropdown={false}>à propos</NavItem>,
+                  <NavItem isDropdown={false} key={Date.now + 2} >à propos</NavItem>,
 
-                  <NavItem isDropdown={true} onHover={handleHover} dropdown={<Dropdown isHidden={inactive1} onMouseLeave={handleMouseLeave}> {dropdownItemsIt} </Dropdown>}>
+                  <NavItem isDropdown={true} key={Date.now + 3}  onHover={handleHover} dropdown={<Dropdown isHidden={inactive1} onMouseLeave={handleMouseLeave}> {dropdownItemsIt} </Dropdown>}>
                         <span className='flex flex-row lg:items-center items-start  lg:gap-1 it'>It & Télécoms <IoMdArrowDropdownCircle className='lg:text-sm text-[6px]' /></span>
                   </NavItem>,
 
-                  <NavItem isDropdown={true} onHover={handleHover} dropdown={<Dropdown isHidden={inactive2} onMouseLeave={handleMouseLeave}> {dropdownItemsDev} </Dropdown>}>
+                  <NavItem isDropdown={true} key={Date.now + 4} onHover={handleHover} dropdown={<Dropdown isHidden={inactive2} onMouseLeave={handleMouseLeave}> {dropdownItemsDev} </Dropdown>}>
                         <span className='flex flex-row lg:items-center items-start  lg:gap-1 dev'>Développement <IoMdArrowDropdownCircle className='lg:text-sm text-[6px]' /></span>
                   </NavItem>,
 
-                  <NavItem isDropdown={true} onHover={handleHover} dropdown={<Dropdown isHidden={inactive3} onMouseLeave={handleMouseLeave}> {dropdownItemsElec} </Dropdown>}>
+                  <NavItem isDropdown={true} key={Date.now + 5} onHover={handleHover} dropdown={<Dropdown isHidden={inactive3} onMouseLeave={handleMouseLeave}> {dropdownItemsElec} </Dropdown>}>
                         <span className='flex flex-row lg:items-center items-start lg:gap-1 elect'>électricité <IoMdArrowDropdownCircle className='lg:text-sm text-[6px]' /></span>
                   </NavItem>,
 
-                  <NavItem isDropdown={false}>formation</NavItem>,
+                  <NavItem isDropdown={false} key={Date.now + 6} >formation</NavItem>, 
 
-                  <NavItem isDropdown={false}>Contact</NavItem>
+                  <NavItem isDropdown={false} key={Date.now + 7} >Contact</NavItem>
       ]
                   }   
                   
