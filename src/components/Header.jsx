@@ -4,7 +4,7 @@ import theme from './theme.js';
 
 export default function Header({children}) {
   return (
-    <HeaderStyled className='flex items-center justify-between relative w-12/12 h-1/2 p-4 lg:px-30'>
+    <HeaderStyled className='flex items-center justify-between relative w-12/12 lg:h-1/2 p-4 lg:px-30 overflow-hidden'>
       {children}
     </HeaderStyled>
   )

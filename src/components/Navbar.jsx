@@ -23,8 +23,8 @@ export default function Navbar({from}) {
 
       var menu;
       let lienMaintenance=`/maintenance/${from}`
-      let lienReseau=`/reseau/${from}`
-      let lienSecurite=`/securite/${from}`
+      let lienReseau=`/réseau/${from}`
+      let lienSecurite=`/sécurité/${from}`
       let lienGeo=`/géolocalisation/${from}`
       let lienSite=`/site_internet/${from}`
       let lienVps=`/vps/${from}`
@@ -36,20 +36,20 @@ export default function Navbar({from}) {
 
 
       const dropdownItemsIt = [
-            <li key={Date.now + 10} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate(lienReseau)}}><PiNetworkFill /> Réseaux & télécoms </span></li>,
-            <li key={Date.now + 11} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate(lienMaintenance)}}><FaTools /> Maintenance </span></li>,
-            <li key={Date.now + 12} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate(lienSecurite)}}><MdSecurity /> Sécurité </span></li>,
-            <li key={Date.now + 13} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate(lienGeo)}}><FaMapLocationDot /> Géolocalisation </span></li>
+            <li key={Date.now + 10} ><span className='flex flex-row items-center gap-2 text-[10px] lg:uppercase lg:text-[13px] ' onClick={(e)=>{e.stopPropagation();navigate(lienReseau)}}><PiNetworkFill /> Réseaux & télécoms </span></li>,
+            <li key={Date.now + 11} ><span className='flex flex-row items-center gap-2 text-[10px] lg:uppercase lg:text-[13px]' onClick={(e)=>{e.stopPropagation();navigate(lienMaintenance)}}><FaTools /> Maintenance </span></li>,
+            <li key={Date.now + 12} ><span className='flex flex-row items-center gap-2 text-[10px] lg:uppercase lg:text-[13px]' onClick={(e)=>{e.stopPropagation();navigate(lienSecurite)}}><MdSecurity /> Sécurité </span></li>,
+            <li key={Date.now + 13} ><span className='flex flex-row items-center gap-2 text-[10px] lg:uppercase lg:text-[13px]' onClick={(e)=>{e.stopPropagation();navigate(lienGeo)}}><FaMapLocationDot /> Géolocalisation </span></li>
       ];
       const dropdownItemsDev = [
-            <li key={Date.now + 14} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate(lienSite)}}><TfiWorld /> Site internet </span></li>,
-            <li key={Date.now + 15} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate(lienVps)}}><FaServer /> VPS-server </span></li>,
-            <li key={Date.now + 16} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate(lienSMS)}}><MdTextsms /> sms marketing </span></li>,
-            <li key={Date.now + 17} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate(lienLogiciel)}}><FaCode /> Génie logiciel </span></li>
+            <li key={Date.now + 14} ><span className='flex flex-row items-center gap-2 text-[10px] lg:uppercase lg:text-[13px]' onClick={(e)=>{e.stopPropagation();navigate(lienSite)}}><TfiWorld /> Site internet </span></li>,
+            <li key={Date.now + 15} ><span className='flex flex-row items-center gap-2 text-[10px] lg:uppercase lg:text-[13px]' onClick={(e)=>{e.stopPropagation();navigate(lienVps)}}><FaServer /> VPS-server </span></li>,
+            <li key={Date.now + 16} ><span className='flex flex-row items-center gap-2 text-[10px] lg:uppercase lg:text-[13px]' onClick={(e)=>{e.stopPropagation();navigate(lienSMS)}}><MdTextsms /> sms marketing </span></li>,
+            <li key={Date.now + 17} ><span className='flex flex-row items-center gap-2 text-[10px] lg:uppercase lg:text-[13px]' onClick={(e)=>{e.stopPropagation();navigate(lienLogiciel)}}><FaCode /> Génie logiciel </span></li>
       ];
       const dropdownItemsElec = [
-            <li key={Date.now + 18} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate(lienElecIndus)}}><FaIndustry /> électricité industrielle </span></li>,
-            <li key={Date.now + 19} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate(lienElecBAT)}}><MdMapsHomeWork />  électricité batiment </span></li>,
+            <li key={Date.now + 18} ><span className='flex flex-row items-center gap-2 text-[10px] lg:uppercase lg:text-[13px]' onClick={(e)=>{e.stopPropagation();navigate(lienElecIndus)}}><FaIndustry /> électricité industrielle </span></li>,
+            <li key={Date.now + 19} ><span className='flex flex-row items-center gap-2 text-[10px] lg:uppercase lg:text-[13px]' onClick={(e)=>{e.stopPropagation();navigate(lienElecBAT)}}><MdMapsHomeWork />  électricité batiment </span></li>,
           ];
 
 
@@ -139,12 +139,12 @@ useEffect(() => {
 
 
   return (
-    <NavbarStyled id="navbar" className="sticky top-0 left-0 w-full h-auto z-50 flex items-center justify-between py-4 shadow-md lg:px-30 px-3" onMouseLeave={(e)=>handleUlLeave(e)} >
-      <span >
+    <NavbarStyled id="navbar" className="sticky top-0 left-0 w-full h-auto z-50 flex items-center justify-between  py-4 shadow-md lg:px-30 px-[7px]" onMouseLeave={(e)=>handleUlLeave(e)} >
+      <span className=''>
             <img src={logo} alt="ITS Logo" className="lg:w-10 w-5" />
       </span>
-      <nav className='lg:visible relative'>
-            <ul className="relative flex flex-row gap-2 lg:gap-5 text-white items-center font-semibold cursor-pointer text-[5px] lg:text-sm ">
+      <nav className='relative'>
+            <ul className="relative flex flex-row gap-1.5 lg:gap-5 text-white items-center font-semibold cursor-pointer text-[7px] lg:text-sm ">
                   {
                         menu =[
                   <NavItem isDropdown={false} key={Date.now + 1} lien="/">Accueil</NavItem>,
@@ -152,15 +152,15 @@ useEffect(() => {
                   <NavItem isDropdown={false} key={Date.now + 2} lien={`/about/${from}`}>à propos</NavItem>,
 
                   <NavItem isDropdown={true} key={Date.now + 3}  onHover={handleHover} dropdown={<Dropdown isHidden={inactive1} onMouseLeave={handleMouseLeave}> {dropdownItemsIt} </Dropdown>}>
-                        <span className='flex flex-row lg:items-center items-start  lg:gap-1 it'>It & Télécoms <IoMdArrowDropdownCircle className='lg:text-sm text-[6px]' /></span>
+                        <span className='flex flex-row lg:items-center items-start  lg:gap-1 it'>It & Télécoms <IoMdArrowDropdownCircle className='lg:text-sm text-[7px] relative top-0.5 lg:top-0' /></span>
                   </NavItem>,
 
                   <NavItem isDropdown={true} key={Date.now + 4} onHover={handleHover} dropdown={<Dropdown isHidden={inactive2} onMouseLeave={handleMouseLeave}> {dropdownItemsDev} </Dropdown>}>
-                        <span className='flex flex-row lg:items-center items-start  lg:gap-1 dev'>Développement <IoMdArrowDropdownCircle className='lg:text-sm text-[6px]' /></span>
+                        <span className='flex flex-row lg:items-center items-start  lg:gap-1 dev'>Développement <IoMdArrowDropdownCircle className='lg:text-sm text-[7px] relative top-0.5 lg:top-0' /></span>
                   </NavItem>,
 
                   <NavItem isDropdown={true} key={Date.now + 5} onHover={handleHover} dropdown={<Dropdown isHidden={inactive3} onMouseLeave={handleMouseLeave}> {dropdownItemsElec} </Dropdown>}>
-                        <span className='flex flex-row lg:items-center items-start lg:gap-1 elect'>électricité <IoMdArrowDropdownCircle className='lg:text-sm text-[6px]' /></span>
+                        <span className='flex flex-row lg:items-center items-start lg:gap-1 elect'>électricité <IoMdArrowDropdownCircle className='lg:text-sm text-[7px] relative top-0.5 lg:top-0' /></span>
                   </NavItem>,
 
                   <NavItem isDropdown={false} key={Date.now + 6} lien={`/formation/${from}`}>formation</NavItem>, 

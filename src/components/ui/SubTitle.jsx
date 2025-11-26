@@ -27,16 +27,16 @@ export default function SubTitle({from, to}) {
     case "maintenance":
         lien=`/maintenance/${to}`
         break
-    case "reseau":
-        lien=`/reseau/${to}`
+    case "réseau":
+        lien=`/réseau/${to}`
         break
-    case "securite":
-        lien=`/securite/${to}`
+    case "sécurite":
+        lien=`/sécurité/${to}`
         break
     case "géolocalisation":
         lien=`/géolocalisation/${to}`
         break
-    case "site_internet":
+    case "site internet":
         lien=`/site_internet/${to}`
         break
     case "VPS-server":

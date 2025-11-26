@@ -6,7 +6,7 @@ import banner from '../../assets/top-banner.jpg'
 
 export default function GenericHeader({name, from}) {
   return (
-    <AboutHeaderStyled className='relative w-full py-25'>
+    <AboutHeaderStyled className='relative w-full lg:py-25 py-10   before:block'>
 
       <div className='relative z-20'>
             <H1>{name}</H1>
@@ -25,8 +25,8 @@ const AboutHeaderStyled = styled.div`
             position: absolute;
             content: "";
             width: 1351px;
-            height: 150%;
-            background: url(${banner}) rgba(0,0,0, 0.7);
+            height: 135%;
+            background: url(${banner}) rgba(0,0,0, 0.4);
             background-blend-mode: darken;
             opacity: 1;
             z-index: 0;
