@@ -1,16 +1,16 @@
 import React from 'react'
-import H1 from '../../ui/H1'
-import SubTitle from '../../ui/SubTitle'
+import H1 from './H1'
+import SubTitle from './SubTitle'
 import styled from 'styled-components';
-import banner from '../../../assets/top-banner.jpg'
+import banner from '../../assets/top-banner.jpg'
 
-export default function AboutHeader() {
+export default function GenericHeader({name, from}) {
   return (
     <AboutHeaderStyled className='relative w-full py-25'>
 
       <div className='relative z-20'>
-            <H1>à propos</H1>
-            <SubTitle from="Accueil" to="à propos" />
+            <H1>{name}</H1>
+            <SubTitle from={from} to={name} />
       </div>
 
     </AboutHeaderStyled>

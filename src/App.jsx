@@ -7,7 +7,7 @@ import About from './components/pages/about/About';
 function App() {
   
   return <AppStyled>
-      <About/>
+      <Home/>
   </AppStyled>
 }
 

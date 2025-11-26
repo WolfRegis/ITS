@@ -7,7 +7,7 @@ export default function HomeHeader() {
       <p className='text-sm text-[#777] '>Depuis plus de 7 ans, ITS vous permet d’être toujours plus innovant et plus réactif.
 ITS dispose d’une offre complète de services, allant du conseil jusqu'à l'exploitation.</p>
       <span className='self-start'>
-        <BtnPrimary inverse={false} >Contactez-nous</BtnPrimary>
+        <BtnPrimary inverse={false} lien="/contact" >Contactez-nous</BtnPrimary>
       </span>
     </div>
   )

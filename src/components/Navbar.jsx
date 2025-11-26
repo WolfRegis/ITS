@@ -9,38 +9,38 @@ import { MdSecurity, MdTextsms, MdMapsHomeWork   } from "react-icons/md";
 import { FaTools, FaServer, FaIndustry  } from "react-icons/fa";
 import { PiNetworkFill } from "react-icons/pi";
 import { TfiWorld } from "react-icons/tfi";
-
-
-
-
-
 import { useEffect, useState } from 'react';
+import {useNavigate } from 'react-router-dom';
 
 
-export default function Navbar() {
+export default function Navbar({from}) {
 
       const [inactive1, setInactive1] = useState(true);
       const [inactive2, setInactive2] = useState(true);
       const [inactive3, setInactive3] = useState(true);
 
+      const navigate = useNavigate()
+
       var menu;
 
 
+
+
       const dropdownItemsIt = [
-            <li key={Date.now + 10} ><span className='flex flex-row items-center gap-2'><PiNetworkFill /> Réseaux & télécoms </span></li>,
-            <li key={Date.now + 11} ><span className='flex flex-row items-center gap-2'><FaTools /> Maintenance </span></li>,
-            <li key={Date.now + 12} ><span className='flex flex-row items-center gap-2'><MdSecurity /> Sécurité </span></li>,
-            <li key={Date.now + 13} ><span className='flex flex-row items-center gap-2'><FaMapLocationDot /> Géolocalisation </span></li>
+            <li key={Date.now + 10} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate("/reseau")}}><PiNetworkFill /> Réseaux & télécoms </span></li>,
+            <li key={Date.now + 11} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate("/maintenance")}}><FaTools /> Maintenance </span></li>,
+            <li key={Date.now + 12} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate("/securité")}}><MdSecurity /> Sécurité </span></li>,
+            <li key={Date.now + 13} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate("/géolocalisation")}}><FaMapLocationDot /> Géolocalisation </span></li>
       ];
       const dropdownItemsDev = [
-            <li key={Date.now + 14} ><span className='flex flex-row items-center gap-2'><TfiWorld /> Site internet </span></li>,
-            <li key={Date.now + 15} ><span className='flex flex-row items-center gap-2'><FaServer /> VPS-server </span></li>,
-            <li key={Date.now + 16} ><span className='flex flex-row items-center gap-2'><MdTextsms /> sms marketing </span></li>,
-            <li key={Date.now + 17} ><span className='flex flex-row items-center gap-2'><FaCode /> Génie logiciel </span></li>
+            <li key={Date.now + 14} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate("/site_internet")}}><TfiWorld /> Site internet </span></li>,
+            <li key={Date.now + 15} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate("/vps_server")}}><FaServer /> VPS-server </span></li>,
+            <li key={Date.now + 16} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate("/sms_marketing")}}><MdTextsms /> sms marketing </span></li>,
+            <li key={Date.now + 17} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate("/génie_logiciel")}}><FaCode /> Génie logiciel </span></li>
       ];
       const dropdownItemsElec = [
-            <li key={Date.now + 18} ><span className='flex flex-row items-center gap-2'><FaIndustry /> électricité industrielle </span></li>,
-            <li key={Date.now + 19} ><span className='flex flex-row items-center gap-2'><MdMapsHomeWork />  électricité batiment </span></li>,
+            <li key={Date.now + 18} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate("/électricité_industrielle")}}><FaIndustry /> électricité industrielle </span></li>,
+            <li key={Date.now + 19} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate("/électricité_batiment")}}><MdMapsHomeWork />  électricité batiment </span></li>,
           ];
 
 
@@ -138,9 +138,9 @@ useEffect(() => {
             <ul className="relative flex flex-row gap-2 lg:gap-5 text-white items-center font-semibold cursor-pointer text-[5px] lg:text-sm ">
                   {
                         menu =[
-                  <NavItem isDropdown={false} key={Date.now + 1} >Accueil</NavItem>,
+                  <NavItem isDropdown={false} key={Date.now + 1} lien="/">Accueil</NavItem>,
 
-                  <NavItem isDropdown={false} key={Date.now + 2} >à propos</NavItem>,
+                  <NavItem isDropdown={false} key={Date.now + 2} lien={`/about/${from}`}>à propos</NavItem>,
 
                   <NavItem isDropdown={true} key={Date.now + 3}  onHover={handleHover} dropdown={<Dropdown isHidden={inactive1} onMouseLeave={handleMouseLeave}> {dropdownItemsIt} </Dropdown>}>
                         <span className='flex flex-row lg:items-center items-start  lg:gap-1 it'>It & Télécoms <IoMdArrowDropdownCircle className='lg:text-sm text-[6px]' /></span>
@@ -154,9 +154,9 @@ useEffect(() => {
                         <span className='flex flex-row lg:items-center items-start lg:gap-1 elect'>électricité <IoMdArrowDropdownCircle className='lg:text-sm text-[6px]' /></span>
                   </NavItem>,
 
-                  <NavItem isDropdown={false} key={Date.now + 6} >formation</NavItem>, 
+                  <NavItem isDropdown={false} key={Date.now + 6} lien="/formation">formation</NavItem>, 
 
-                  <NavItem isDropdown={false} key={Date.now + 7} >Contact</NavItem>
+                  <NavItem isDropdown={false} key={Date.now + 7} lien={`/contact/${from}`}>Contact</NavItem>
       ]
                   }   
                   
