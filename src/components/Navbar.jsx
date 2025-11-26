@@ -22,25 +22,34 @@ export default function Navbar({from}) {
       const navigate = useNavigate()
 
       var menu;
-
+      let lienMaintenance=`/maintenance/${from}`
+      let lienReseau=`/reseau/${from}`
+      let lienSecurite=`/securite/${from}`
+      let lienGeo=`/géolocalisation/${from}`
+      let lienSite=`/site_internet/${from}`
+      let lienVps=`/vps/${from}`
+      let lienSMS=`/sms_marketing/${from}`
+      let lienLogiciel=`/génie_logiciel/${from}`
+      let lienElecIndus=`/électricité_industrielle/${from}`
+      let lienElecBAT=`/électricité_batiment/${from}`
 
 
 
       const dropdownItemsIt = [
-            <li key={Date.now + 10} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate("/reseau")}}><PiNetworkFill /> Réseaux & télécoms </span></li>,
-            <li key={Date.now + 11} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate("/maintenance")}}><FaTools /> Maintenance </span></li>,
-            <li key={Date.now + 12} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate("/securité")}}><MdSecurity /> Sécurité </span></li>,
-            <li key={Date.now + 13} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate("/géolocalisation")}}><FaMapLocationDot /> Géolocalisation </span></li>
+            <li key={Date.now + 10} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate(lienReseau)}}><PiNetworkFill /> Réseaux & télécoms </span></li>,
+            <li key={Date.now + 11} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate(lienMaintenance)}}><FaTools /> Maintenance </span></li>,
+            <li key={Date.now + 12} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate(lienSecurite)}}><MdSecurity /> Sécurité </span></li>,
+            <li key={Date.now + 13} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate(lienGeo)}}><FaMapLocationDot /> Géolocalisation </span></li>
       ];
       const dropdownItemsDev = [
-            <li key={Date.now + 14} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate("/site_internet")}}><TfiWorld /> Site internet </span></li>,
-            <li key={Date.now + 15} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate("/vps_server")}}><FaServer /> VPS-server </span></li>,
-            <li key={Date.now + 16} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate("/sms_marketing")}}><MdTextsms /> sms marketing </span></li>,
-            <li key={Date.now + 17} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate("/génie_logiciel")}}><FaCode /> Génie logiciel </span></li>
+            <li key={Date.now + 14} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate(lienSite)}}><TfiWorld /> Site internet </span></li>,
+            <li key={Date.now + 15} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate(lienVps)}}><FaServer /> VPS-server </span></li>,
+            <li key={Date.now + 16} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate(lienSMS)}}><MdTextsms /> sms marketing </span></li>,
+            <li key={Date.now + 17} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate(lienLogiciel)}}><FaCode /> Génie logiciel </span></li>
       ];
       const dropdownItemsElec = [
-            <li key={Date.now + 18} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate("/électricité_industrielle")}}><FaIndustry /> électricité industrielle </span></li>,
-            <li key={Date.now + 19} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate("/électricité_batiment")}}><MdMapsHomeWork />  électricité batiment </span></li>,
+            <li key={Date.now + 18} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate(lienElecIndus)}}><FaIndustry /> électricité industrielle </span></li>,
+            <li key={Date.now + 19} ><span className='flex flex-row items-center gap-2' onClick={(e)=>{e.stopPropagation();navigate(lienElecBAT)}}><MdMapsHomeWork />  électricité batiment </span></li>,
           ];
 
 
@@ -154,7 +163,7 @@ useEffect(() => {
                         <span className='flex flex-row lg:items-center items-start lg:gap-1 elect'>électricité <IoMdArrowDropdownCircle className='lg:text-sm text-[6px]' /></span>
                   </NavItem>,
 
-                  <NavItem isDropdown={false} key={Date.now + 6} lien="/formation">formation</NavItem>, 
+                  <NavItem isDropdown={false} key={Date.now + 6} lien={`/formation/${from}`}>formation</NavItem>, 
 
                   <NavItem isDropdown={false} key={Date.now + 7} lien={`/contact/${from}`}>Contact</NavItem>
       ]

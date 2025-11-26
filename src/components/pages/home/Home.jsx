@@ -20,7 +20,7 @@ export default function Home() {
       <ItBan/>
       <Navbar from={name}></Navbar>
       <Header>
-        <HomeHeader/>
+        <HomeHeader from={name}/>
       </Header>
       <CardContainer>
         <Card titre="Sécurité" details="Sécurisez les infrastructures réseaux de vos entreprises pour prévenir, détecter et récupérer en cas de menaces." ></Card>

@@ -10,6 +10,7 @@ export default function SubTitle({from, to}) {
 
   let lien =""
 
+
   switch (from){
     case "Accueil":
         lien="/";
@@ -19,6 +20,39 @@ export default function SubTitle({from, to}) {
         break
     case "à propos":
         lien=`/about/${to}`
+        break
+    case "formation":
+        lien=`/formation/${to}`
+        break
+    case "maintenance":
+        lien=`/maintenance/${to}`
+        break
+    case "reseau":
+        lien=`/reseau/${to}`
+        break
+    case "securite":
+        lien=`/securite/${to}`
+        break
+    case "géolocalisation":
+        lien=`/géolocalisation/${to}`
+        break
+    case "site_internet":
+        lien=`/site_internet/${to}`
+        break
+    case "VPS-server":
+        lien=`/vps/${to}`
+        break
+    case "sms marketing":
+        lien=`/sms_marketing/${to}`
+        break
+    case "génie logiciel":
+        lien=`/génie_logiciel/${to}`
+        break
+    case "électricité industrielle":
+        lien=`/électricité_industrielle/${to}`
+        break
+    case "électricité batiment":
+        lien=`/électricité_batiment/${to}`
         break
 
     default :
