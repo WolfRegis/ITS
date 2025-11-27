@@ -1,6 +1,7 @@
 import { FaLocationDot, FaMapLocationDot } from "react-icons/fa6";
 import { IoHome } from "react-icons/io5";
 import { IoMdAlarm } from "react-icons/io";
+import H1Black from "../../ui/H1Black";
 
 
 
@@ -10,7 +11,7 @@ export default function MapContainer() {
                <aside className='px-2 relative lg:w-3/5 lg:h-120 box-border py-3 flex flex-col lg:gap-5 gap-2'>
                         <span className=''> <b className='uppercase text-[#17a2b8] lg:text-lg'>Localisation</b> <IoHome   className='inline text-lg -top-1 relative text-[#17a2b8]' /></span>
             
-                        <h1 className='text-black font-black uppercase lg:text-4xl'>Nous retrouver ?</h1>
+                        <H1Black>Nous retrouver ?</H1Black>
             
                         <div className='self-start lg:scale-100 box-border flex flex-row lg:items-center gap-2 lg:h-40 h-20 lg:w-120 w-80 rounded-md  shadow-[0_0_55px_rgba(21,40,76,0.08)] lg:p-2 p-1'>
                               <div className='h-full w-1/3 flex justify-center bg-[#ddd] rounded-md'>

@@ -5,9 +5,6 @@ import { useNavigate } from 'react-router-dom'
 export default function SubTitle({from, to}) {
   const navigate = useNavigate()
 
-  console.log('je viens de :'+from)
-  console.log('je je suis sur :'+to)
-
   let lien =""
 
 

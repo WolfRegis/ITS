@@ -8,6 +8,7 @@ import GenericHeader from '../../ui/GenericHeader'
 import Card from '../../ui/Card'
 import AboutContainer from './AboutContainer'
 import MapContainer from './MapContainer'
+import TrustContainer from './TrustContainer'
 
 
 
@@ -34,6 +35,7 @@ export default function About() {
       </CardContainer>
       
       <AboutContainer />
+      <TrustContainer />
       <MapContainer />
 
       <Footer/>

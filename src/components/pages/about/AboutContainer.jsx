@@ -2,7 +2,7 @@
 import logo from '../../../assets/logo.png'
 import { FcAbout } from "react-icons/fc";
 import { PiPhoneCallThin } from "react-icons/pi";
-
+import H1Black from '../../ui/H1Black';
 
 
 
@@ -13,7 +13,7 @@ export default function AboutContainer() {
       <aside className='px-2 relative lg:w-3/5 lg:h-120 box-border py-3 flex flex-col lg:gap-5 gap-2'>
             <span className=''> <b className='uppercase text-[#17a2b8] lg:text-lg'>à propos</b> <FcAbout className='inline text-2xl relative -top-3 text-[#17a2b8]' /></span>
 
-            <h1 className='text-black font-black uppercase lg:text-4xl'>qui sommes-nous ?</h1>
+            <H1Black>qui sommes-nous ?</H1Black>
 
             <p className='text-[#777] font-semibold'>
                   Depuis sa création en 2012, ITS Groupe s'est imposé comme un acteur majeur en fournissant des solutions informatiques efficaces pour accompagner des entreprises dans un monde numérique en constante évolution. Au fil des années, nous avons élargi notre champ d'expertise pour répondre aux besoins variés de nos clients, en integrant notament l'électricité industrielle, l'électricité batiment, les énergies renouvellables et l'instrumentation.
