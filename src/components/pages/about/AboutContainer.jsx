@@ -11,7 +11,7 @@ export default function AboutContainer() {
     <section className='relative w-full  flex lg:gap-15 lg:flex-row lg:justify-between flex-col justify-center box-border lg:px-25 px-5 py-10'>
       <aside className={`lg:block hidden relative lg:w-2/5 w-1/5 box-border bg-contain bg-no-repeat bg-center shadow-2xl shadow-[rgba(21, 40, 76, 0.08)]`} style={{backgroundImage: `url(${logo})`}}></aside>
       <aside className='px-2 relative lg:w-3/5 lg:h-120 box-border py-3 flex flex-col lg:gap-5 gap-2'>
-            <span className=''> <b className='uppercase text-[#17a2b8] lg:text-lg'>à propos</b> <FcAbout className='inline text-2xl relative -top-3' /></span>
+            <span className=''> <b className='uppercase text-[#17a2b8] lg:text-lg'>à propos</b> <FcAbout className='inline text-2xl relative -top-3 text-[#17a2b8]' /></span>
 
             <h1 className='text-black font-black uppercase lg:text-4xl'>qui sommes-nous ?</h1>
 
