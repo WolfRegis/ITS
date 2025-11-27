@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom'
 import GenericHeader from '../../ui/GenericHeader'
 import Card from '../../ui/Card'
 import AboutContainer from './AboutContainer'
+import MapContainer from './MapContainer'
 
 
 
@@ -33,6 +34,7 @@ export default function About() {
       </CardContainer>
       
       <AboutContainer />
+      <MapContainer />
 
       <Footer/>
     </div>
