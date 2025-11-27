@@ -6,6 +6,7 @@ import Footer from '../../Footer'
 import { useParams } from 'react-router-dom'
 import GenericHeader from '../../ui/GenericHeader'
 import Card from '../../ui/Card'
+import ContactContainer from './ContactContainer'
 
 
 
@@ -22,6 +23,7 @@ export default function Contact() {
       <Header>
             <GenericHeader name={name} from={from} />
       </Header>
+      <ContactContainer />
       <Footer/>
     </div>
   )
